@@ -15,7 +15,12 @@ import {
   ListItemButton,
   Collapse,
 } from "@mui/material"
-import { KeyboardArrowDown, Menu as MenuIcon, ExpandLess, ExpandMore } from "@mui/icons-material"
+import {
+  KeyboardArrowDown,
+  Menu as MenuIcon,
+  ExpandLess,
+  ExpandMore,
+} from "@mui/icons-material"
 import Link from "next/link"
 
 export default function Navbar() {
@@ -50,29 +55,39 @@ export default function Navbar() {
       sx={{ borderBottom: "1px solid rgba(255, 255, 255, 0.2)" }}
     >
       <Toolbar sx={{ height: 80 }}>
-      <Link href="/" passHref>
-      <Typography
-      variant="h6"
-      component="div"
-      sx={{
-        fontFamily: '"SEGA LOGO FONT", sans-serif',
-        fontWeight: 400,
-        fontSize: "1.5rem",
-        letterSpacing: "0.1em"
-      }}
-    >
-      Novaspace
-    </Typography>
-
-
-</Link>
-
-
+        <Link href="/" passHref>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{
+              fontFamily: '"SEGA LOGO FONT", sans-serif',
+              fontWeight: 400,
+              fontSize: "1.5rem",
+              letterSpacing: "0.1em",
+            }}
+          >
+            NOVASPACE
+          </Typography>
+        </Link>
 
         <Box sx={{ flexGrow: 1 }} />
+         {/* About Button */}
+          <Link href="/about" passHref>
+            <Button
+              color="inherit"
+              sx={{
+                textTransform: "uppercase",
+                letterSpacing: "0.1em",
+                fontSize: "0.875rem",
+                marginRight: 2,
+              }}
+            >
+              About
+            </Button>
+          </Link>
 
         {/* Desktop Menu */}
-        <Box sx={{ display: { xs: "none", md: "flex" } }}>
+        <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 2 }}>
           <Button
             color="inherit"
             endIcon={<KeyboardArrowDown />}
@@ -105,9 +120,11 @@ export default function Navbar() {
               Pitch Deck
             </MenuItem>
           </Menu>
+
+         
         </Box>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Button */}
         <IconButton
           color="inherit"
           aria-label="open drawer"
@@ -118,6 +135,7 @@ export default function Navbar() {
           <MenuIcon />
         </IconButton>
 
+        {/* Mobile Drawer */}
         <Drawer
           anchor="right"
           open={drawerOpen}
@@ -132,7 +150,7 @@ export default function Navbar() {
         >
           <Box sx={{ mb: 4 }}>
             <Typography variant="h6" component="div" sx={{ fontWeight: 700 }}>
-              SAFRONX
+              NOVASPACE
             </Typography>
           </Box>
 
@@ -150,6 +168,7 @@ export default function Navbar() {
               />
               {mobileExpanded ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
+
             <Collapse in={mobileExpanded} timeout="auto" unmountOnExit>
               <List component="div" disablePadding>
                 <ListItemButton sx={{ pl: 4 }}>
@@ -163,6 +182,22 @@ export default function Navbar() {
                 </ListItemButton>
               </List>
             </Collapse>
+
+            {/* About Link in Drawer */}
+            <Link href="/about" passHref>
+              <ListItemButton>
+                <ListItemText
+                  primary="About"
+                  primaryTypographyProps={{
+                    sx: {
+                      textTransform: "uppercase",
+                      letterSpacing: "0.1em",
+                      fontSize: "0.875rem",
+                    },
+                  }}
+                />
+              </ListItemButton>
+            </Link>
           </List>
         </Drawer>
       </Toolbar>
