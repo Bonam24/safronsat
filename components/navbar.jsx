@@ -60,10 +60,10 @@ export default function Navbar() {
             variant="h6"
             component="div"
             sx={{
-              fontFamily: '"SEGA LOGO FONT", sans-serif',
-              fontWeight: 400,
+              fontWeight: 700, // Changed from 400 to 700 for bolder text
               fontSize: "1.5rem",
               letterSpacing: "0.1em",
+              textTransform: 'uppercase'
             }}
           >
             NOVASPACE
@@ -71,20 +71,21 @@ export default function Navbar() {
         </Link>
 
         <Box sx={{ flexGrow: 1 }} />
-         {/* About Button */}
-          <Link href="/about" passHref>
-            <Button
-              color="inherit"
-              sx={{
-                textTransform: "uppercase",
-                letterSpacing: "0.1em",
-                fontSize: "0.875rem",
-                marginRight: 2,
-              }}
-            >
-              About
-            </Button>
-          </Link>
+        
+        {/* About Button */}
+        <Link href="/about" passHref>
+          <Button
+            color="inherit"
+            sx={{
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              fontSize: "0.875rem",
+              marginRight: 2,
+            }}
+          >
+            About
+          </Button>
+        </Link>
 
         {/* Desktop Menu */}
         <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 2 }}>
@@ -120,8 +121,6 @@ export default function Navbar() {
               Pitch Deck
             </MenuItem>
           </Menu>
-
-         
         </Box>
 
         {/* Mobile Menu Button */}

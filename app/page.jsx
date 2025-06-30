@@ -1,5 +1,5 @@
-"use client"
-import Navbar from "@/components/navbar"
+"use client";
+import Navbar from "@/components/navbar";
 import {
   Box,
   Button,
@@ -17,12 +17,13 @@ import {
   Divider,
   ThemeProvider,
   createTheme,
-} from "@mui/material"
-import { ArrowForward, Satellite, Rocket, Storage, Public, People, Analytics } from "@mui/icons-material"
-import Link from "next/link"
-import '@/styles/globals.css'
-import ServiceSection from "@/components/serviceSection"
-import HeroSection from "@/components/heroSection"
+} from "@mui/material";
+import { ArrowForward, Satellite, Rocket, Storage, Public, People, Analytics } from "@mui/icons-material";
+import Link from "next/link";
+import '@/styles/globals.css';
+import ServiceSection from "@/components/serviceSection";
+import HeroSection from "@/components/heroSection";
+import LocationMap from "@/components/map";
 
 // Create a custom theme with black and white colors
 const theme = createTheme({
@@ -120,7 +121,7 @@ const theme = createTheme({
       },
     },
   },
-})
+});
 
 
 export default function Home() {
@@ -131,15 +132,6 @@ export default function Home() {
 
         {/* Hero Section */}
         <HeroSection/>
-
-       
-
-        {/* Services Section */}
-          {/* <ServiceSection/> */}
-
-
-
-
 
         {/* Technology Section */}
         <Box sx={{ borderBottom: "1px solid rgba(255, 255, 255, 0.2)" }}>
@@ -240,23 +232,27 @@ export default function Home() {
           </Container>
         </Box>
 
-
-       
-
         {/* Contact Section */}
         <Box>
           <Container sx={{ py: { xs: 8, md: 12 } }}>
-            <Grid container spacing={8}>
-              <Grid item xs={12} md={5}>
-                <Typography variant="h2" component="h2" sx={{ fontSize: { xs: "2rem", md: "2.5rem" }, mb: 3 }}>
-                  Get in Touch
-                </Typography>
-                <Typography variant="body1" sx={{ color: "text.secondary", mb: 4 }}>
-                  Interested in learning more about our satellite solutions or exploring partnership opportunities? Our
-                  team is ready to assist you.
-                </Typography>
+            <Box sx={{ textAlign: 'center', mb: 6 }}>
+              <Typography variant="h2" component="h2" sx={{ fontSize: { xs: "2rem", md: "2.5rem" }, mb: 3 }}>
+                Get in Touch
+              </Typography>
+              <Typography variant="body1" sx={{ 
+                color: "text.secondary", 
+                maxWidth: '800px',
+                mx: 'auto',
+                mb: 4 
+              }}>
+                Interested in learning more about our satellite solutions or exploring partnership opportunities? Our
+                team is ready to assist you.
+              </Typography>
+            </Box>
 
-                <Box sx={{ display: "flex", flexDirection: "column", gap: 3, mt: 4 }}>
+            <Grid container spacing={8}>
+              <Grid item xs={12} md={6}>
+                <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
                   <Box>
                     <Typography variant="overline" sx={{ color: "text.secondary", display: "block", mb: 0.5 }}>
                       Headquarters
@@ -264,7 +260,6 @@ export default function Home() {
                     <Typography variant="body1">68 chalbi dr , Lavington</Typography>
                     <Typography variant="body1">Nairobi, Kenya</Typography>
                   </Box>
-                  {/* location 2 */}
                   <Box>
                     <Typography variant="overline" sx={{ color: "text.secondary", display: "block", mb: 0.5 }}>
                       Headquarters 2
@@ -272,25 +267,17 @@ export default function Home() {
                     <Typography variant="body1">1710-Atrisco-Dr, Albuquerque</Typography>
                     <Typography variant="body1">New Mexico, United States</Typography>
                   </Box>
-
                   <Box>
                     <Typography variant="overline" sx={{ color: "text.secondary", display: "block", mb: 0.5 }}>
                       Email
                     </Typography>
                     <Typography variant="body1">tech@safronsat.com</Typography>
                   </Box>
-
-                  {/* <Box>
-                    <Typography variant="overline" sx={{ color: "text.secondary", display: "block", mb: 0.5 }}>
-                      Phone
-                    </Typography>
-                    <Typography variant="body1">+254 (0) 123 456 789</Typography>
-                  </Box> */}
                 </Box>
               </Grid>
 
-              <Grid item xs={12} md={7}>
-                
+              <Grid item xs={12} md={6}>
+                <LocationMap />
               </Grid>
             </Grid>
           </Container>
@@ -298,105 +285,105 @@ export default function Home() {
 
         {/* Footer */}
         <Box sx={{ borderTop: "1px solid rgba(255, 255, 255, 0.2)" }}>
-  <Container sx={{ py: 6 }}>
-    <Grid container spacing={8} sx={{ mb: 6 }}> {/* Increased spacing from 4 to 8 */}
-      <Grid item xs={12} md={3}>
-        <Typography variant="h6" component="div" sx={{ fontWeight: 700, mb: 3 }}>
-          Novaspace
-        </Typography>
-        <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          Building the future of satellite technology for Africa and beyond.
-        </Typography>
-      </Grid>
+          <Container sx={{ py: 6 }}>
+            <Grid container spacing={8} sx={{ mb: 6 }}>
+              <Grid item xs={12} md={3}>
+                <Typography variant="h6" component="div" sx={{ fontWeight: 700, mb: 3 }}>
+                  NOVASPACE
+                </Typography>
+                <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                  Building the future of satellite technology for Africa and beyond.
+                </Typography>
+              </Grid>
 
-      <Grid item xs={12} sm={4} md={2.5} sx={{ pl: 4 }}> {/* Reduced md size and added left padding */}
-        <Typography variant="overline" sx={{ display: "block", mb: 3 }}>
-          Company
-        </Typography>
-        <List disablePadding>
-          {["About Us", "Our Mission", "Leadership", "Careers", "News"].map((item) => (
-            <ListItem key={item} disablePadding sx={{ pb: 1 }}>
-              <ListItemText
-                primary={
-                  <Link href="#" style={{ color: "rgba(255, 255, 255, 0.7)", textDecoration: "none" }}>
-                    {item}
-                  </Link>
-                }
-              />
-            </ListItem>
-          ))}
-        </List>
-      </Grid>
+              <Grid item xs={12} sm={4} md={2.5} sx={{ pl: 4 }}>
+                <Typography variant="overline" sx={{ display: "block", mb: 3 }}>
+                  Company
+                </Typography>
+                <List disablePadding>
+                  {["About Us", "Our Mission", "Leadership", "Careers", "News"].map((item) => (
+                    <ListItem key={item} disablePadding sx={{ pb: 1 }}>
+                      <ListItemText
+                        primary={
+                          <Link href="/about" style={{ color: "rgba(255, 255, 255, 0.7)", textDecoration: "none" }}>
+                            {item}
+                          </Link>
+                        }
+                      />
+                    </ListItem>
+                  ))}
+                </List>
+              </Grid>
 
-      <Grid item xs={12} sm={4} md={2.5} sx={{ pl: 4 }}> {/* Reduced md size and added left padding */}
-        <Typography variant="overline" sx={{ display: "block", mb: 3 }}>
-          Services
-        </Typography>
-        <List disablePadding>
-          {["Safron-1", "Night-Lights", "Launch", "Connect & Monitor"].map(
-            (item) => (
-              <ListItem key={item} disablePadding sx={{ pb: 1 }}>
-                <ListItemText
-                  primary={
-                    <Link href="#" style={{ color: "rgba(255, 255, 255, 0.7)", textDecoration: "none" }}>
-                      {item}
-                    </Link>
-                  }
-                />
-              </ListItem>
-            ),
-          )}
-        </List>
-      </Grid>
+              <Grid item xs={12} sm={4} md={2.5} sx={{ pl: 4 }}>
+                <Typography variant="overline" sx={{ display: "block", mb: 3 }}>
+                  Services
+                </Typography>
+                <List disablePadding>
+                  {["Safron-1", "Night-Lights", "Launch", "Connect & Monitor"].map(
+                    (item) => (
+                      <ListItem key={item} disablePadding sx={{ pb: 1 }}>
+                        <ListItemText
+                          primary={
+                            <Link href="#" style={{ color: "rgba(255, 255, 255, 0.7)", textDecoration: "none" }}>
+                              {item}
+                            </Link>
+                          }
+                        />
+                      </ListItem>
+                    ),
+                  )}
+                </List>
+              </Grid>
 
-      <Grid item xs={12} sm={4} md={2.5} sx={{ pl: 4 }}> {/* Reduced md size and added left padding */}
-        <Typography variant="overline" sx={{ display: "block", mb: 3 }}>
-          Connect
-        </Typography>
-        <List disablePadding>
-          {["Contact Us", "Investor Relations", "Partnership Inquiries", "Media Kit"].map((item) => (
-            <ListItem key={item} disablePadding sx={{ pb: 1 }}>
-              <ListItemText
-                primary={
-                  <Link href="#" style={{ color: "rgba(255, 255, 255, 0.7)", textDecoration: "none" }}>
-                    {item}
-                  </Link>
-                }
-              />
-            </ListItem>
-          ))}
-        </List>
-      </Grid>
-    </Grid>
+              <Grid item xs={12} sm={4} md={2.5} sx={{ pl: 4 }}>
+                <Typography variant="overline" sx={{ display: "block", mb: 3 }}>
+                  Connect
+                </Typography>
+                <List disablePadding>
+                  {["Contact Us", "Investor Relations", "Partnership Inquiries", "Media Kit"].map((item) => (
+                    <ListItem key={item} disablePadding sx={{ pb: 1 }}>
+                      <ListItemText
+                        primary={
+                          <Link href="#" style={{ color: "rgba(255, 255, 255, 0.7)", textDecoration: "none" }}>
+                            {item}
+                          </Link>
+                        }
+                      />
+                    </ListItem>
+                  ))}
+                </List>
+              </Grid>
+            </Grid>
 
-    <Divider sx={{ mb: 3 }} />
+            <Divider sx={{ mb: 3 }} />
 
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: { xs: "column", md: "row" },
-        justifyContent: "space-between",
-        alignItems: { xs: "center", md: "center" },
-        gap: { xs: 2, md: 0 },
-      }}
-    >
-      <Typography variant="body2" sx={{ color: "text.secondary" }}>
-        © {new Date().getFullYear()} Safronsat. All rights reserved.
-      </Typography>
-      <Box sx={{ display: "flex", gap: 3 }}>
-        <Link href="#" style={{ color: "rgba(255, 255, 255, 0.7)", textDecoration: "none" }}>
-          Privacy Policy
-        </Link>
-        <Link href="#" style={{ color: "rgba(255, 255, 255, 0.7)", textDecoration: "none" }}>
-          Terms of Service
-        </Link>
-        <Link href="#" style={{ color: "rgba(255, 255, 255, 0.7)", textDecoration: "none" }}>
-          Cookie Policy
-        </Link>
-      </Box>
-    </Box>
-  </Container>
-</Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", md: "row" },
+                justifyContent: "space-between",
+                alignItems: { xs: "center", md: "center" },
+                gap: { xs: 2, md: 0 },
+              }}
+            >
+              <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                © {new Date().getFullYear()} NOVASPACE. All rights reserved.
+              </Typography>
+              <Box sx={{ display: "flex", gap: 3 }}>
+                <Link href="#" style={{ color: "rgba(255, 255, 255, 0.7)", textDecoration: "none" }}>
+                  Privacy Policy
+                </Link>
+                <Link href="#" style={{ color: "rgba(255, 255, 255, 0.7)", textDecoration: "none" }}>
+                  Terms of Service
+                </Link>
+                <Link href="#" style={{ color: "rgba(255, 255, 255, 0.7)", textDecoration: "none" }}>
+                  Cookie Policy
+                </Link>
+              </Box>
+            </Box>
+          </Container>
+        </Box>
       </Box>
     </ThemeProvider>
   )
