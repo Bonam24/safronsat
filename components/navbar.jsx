@@ -61,7 +61,7 @@ export default function Navbar() {
         letterSpacing: "0.1em"
       }}
     >
-      SAFRONSAT
+      Novaspace
     </Typography>
 
 

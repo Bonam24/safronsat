@@ -132,84 +132,10 @@ export default function Home() {
         {/* Hero Section */}
         <HeroSection/>
 
-        {/* Mission Section */}
-        {/* <Box sx={{ borderBottom: "1px solid rgba(255, 255, 255, 0.2)" }}>
-          <Container sx={{ py: { xs: 8, md: 12 } }}>
-            <Grid container spacing={6} alignItems="center">
-              <Grid item xs={12} md={6}>
-                <Typography variant="h2" component="h2" sx={{ fontSize: { xs: "2rem", md: "2.5rem" }, mb: 3 }}>
-                  Our mission for Africa
-                </Typography>
-                <Typography variant="body1" sx={{ color: "text.secondary", mb: 2 }}>
-                  Safronx is dedicated to transforming Africa's technological landscape through advanced satellite
-                  solutions. We believe that space technology can bridge the digital divide and create unprecedented
-                  opportunities for economic growth, education, and connectivity across the continent.
-                </Typography>
-                <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
-                  By 2030, our goal is to deploy a constellation of satellites specifically designed to address Africa's
-                  unique challenges and unlock its vast potential.
-                </Typography>
-                <Button
-                  component={Link}
-                  href="#"
-                  endIcon={<ArrowForward />}
-                  sx={{
-                    p: 0,
-                    "&:hover": {
-                      backgroundColor: "transparent",
-                      "& .MuiSvgIcon-root": { transform: "translateX(4px)" },
-                    },
-                    "& .MuiSvgIcon-root": { transition: "transform 0.2s" },
-                  }}
-                >
-                  Learn more about our vision
-                </Button>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Paper
-                  elevation={0}
-                  sx={{
-                    height: 400,
-                    position: "relative",
-                    overflow: "hidden",
-                    border: "1px solid rgba(255, 255, 255, 0.2)",
-                  }}
-                >
-                  <Box
-                    component="img"
-                    src="/placeholder.svg?height=800&width=600"
-                    alt="African landscape"
-                    sx={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                    }}
-                  />
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      bottom: 0,
-                      left: 0,
-                      right: 0,
-                      p: 3,
-                      background: "linear-gradient(to top, rgba(0,0,0,0.8), transparent)",
-                    }}
-                  >
-                    <Typography variant="overline" sx={{ color: "text.secondary", display: "block" }}>
-                      Connecting the unconnected
-                    </Typography>
-                    <Typography variant="h6" component="h3">
-                      Bringing connectivity to remote regions
-                    </Typography>
-                  </Box>
-                </Paper>
-              </Grid>
-            </Grid>
-          </Container>
-        </Box> */}
+       
 
         {/* Services Section */}
-          <ServiceSection/>
+          {/* <ServiceSection/> */}
 
 
 
@@ -220,34 +146,7 @@ export default function Home() {
           <Container sx={{ py: { xs: 8, md: 12 } }}>
             <Grid container spacing={8} alignItems="center">
               <Grid item xs={12} md={6} sx={{ order: { xs: 2, md: 1 } }}>
-                {/* <Box sx={{ position: "relative" }}>
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      inset: "-16px",
-                      border: "1px solid rgba(255, 255, 255, 0.2)",
-                      borderRadius: 0,
-                      zIndex: -1,
-                    }}
-                  />
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      inset: "-8px",
-                      border: "1px solid rgba(255, 255, 255, 0.2)",
-                      borderRadius: 0,
-                      zIndex: -1,
-                    }}
-                  />
-                  <Card>
-                    <CardMedia
-                      component="img"
-                      image="/images/hero-f.png"
-                      alt="Satellite technology"
-                      sx={{ width: "100%", height: "auto" }}
-                    />
-                  </Card>
-                </Box> */}
+                
               </Grid>
               <Grid item xs={12} md={6} sx={{ order: { xs: 1, md: 2 } }} id="tech">
                 <Typography variant="h2" component="h2" sx={{ fontSize: { xs: "2rem", md: "2.5rem" }, mb: 3 }}>
@@ -342,103 +241,7 @@ export default function Home() {
         </Box>
 
 
-        {/* News Section */}
-        {/* <Box sx={{ borderBottom: "1px solid rgba(255, 255, 255, 0.2)" }}>
-          <Container sx={{ py: { xs: 8, md: 12 } }}>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: { xs: "column", md: "row" },
-                justifyContent: "space-between",
-                alignItems: { xs: "flex-start", md: "center" },
-                mb: 8,
-              }}
-            >
-              <Box>
-                <Typography variant="h2" component="h2" sx={{ fontSize: { xs: "2rem", md: "2.5rem" }, mb: 1 }}>
-                  Latest News
-                </Typography>
-                <Typography variant="body1" sx={{ color: "text.secondary" }}>
-                  Stay updated with our latest developments and industry insights.
-                </Typography>
-              </Box>
-              <Button
-                component={Link}
-                href="#"
-                endIcon={<ArrowForward />}
-                sx={{
-                  mt: { xs: 2, md: 0 },
-                  p: 0,
-                  "&:hover": {
-                    backgroundColor: "transparent",
-                    "& .MuiSvgIcon-root": { transform: "translateX(4px)" },
-                  },
-                  "& .MuiSvgIcon-root": { transition: "transform 0.2s" },
-                }}
-              >
-                View all news
-              </Button>
-            </Box>
-
-            <Grid container spacing={4}>
-              {[
-                {
-                  title: "Successful Launch of SafronX",
-                  date: "February 8, 2025",
-                  excerpt:
-                    "Third satellite in constellation successfully deployed, expanding coverage across Eastern Africa.",
-                },
-              ].map((news, index) => (
-                <Grid item xs={12} md={4} key={index}>
-                  <Card
-                    sx={{
-                      height: "100%",
-                      transition: "background-color 0.3s",
-                      "&:hover": { bgcolor: "rgba(255, 255, 255, 0.05)" },
-                    }}
-                  >
-                    <CardMedia
-                      component="img"
-                      image="/placeholder.svg?height=400&width=600"
-                      alt={news.title}
-                      sx={{
-                        aspectRatio: "16/9",
-                        transition: "transform 0.3s",
-                        "&:hover": { transform: "scale(1.05)" },
-                      }}
-                    />
-                    <CardContent>
-                      <Typography variant="caption" sx={{ color: "text.secondary", display: "block", mb: 1 }}>
-                        {news.date}
-                      </Typography>
-                      <Typography variant="h6" component="h3" sx={{ mb: 1 }}>
-                        {news.title}
-                      </Typography>
-                      <Typography variant="body2" sx={{ color: "text.secondary", mb: 2 }}>
-                        {news.excerpt}
-                      </Typography>
-                      <Button
-                        component={Link}
-                        href="#"
-                        endIcon={<ArrowForward />}
-                        sx={{
-                          p: 0,
-                          "&:hover": {
-                            backgroundColor: "transparent",
-                            "& .MuiSvgIcon-root": { transform: "translateX(4px)" },
-                          },
-                          "& .MuiSvgIcon-root": { transition: "transform 0.2s" },
-                        }}
-                      >
-                        Read more
-                      </Button>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              ))}
-            </Grid>
-          </Container>
-        </Box> */}
+       
 
         {/* Contact Section */}
         <Box>
@@ -487,42 +290,7 @@ export default function Home() {
               </Grid>
 
               <Grid item xs={12} md={7}>
-                <Card sx={{ p: 4 }}>
-                  <Box component="form" sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
-                    <Grid container spacing={3}>
-                      <Grid item xs={12} sm={6}>
-                        <Typography variant="overline" sx={{ color: "text.secondary", display: "block", mb: 1 }}>
-                          Name
-                        </Typography>
-                        <TextField fullWidth variant="outlined" />
-                      </Grid>
-                      <Grid item xs={12} sm={6}>
-                        <Typography variant="overline" sx={{ color: "text.secondary", display: "block", mb: 1 }}>
-                          Email
-                        </Typography>
-                        <TextField fullWidth variant="outlined" />
-                      </Grid>
-                    </Grid>
-
-                    <Box>
-                      <Typography variant="overline" sx={{ color: "text.secondary", display: "block", mb: 1 }}>
-                        Subject
-                      </Typography>
-                      <TextField fullWidth variant="outlined" />
-                    </Box>
-
-                    <Box>
-                      <Typography variant="overline" sx={{ color: "text.secondary", display: "block", mb: 1 }}>
-                        Message
-                      </Typography>
-                      <TextField fullWidth variant="outlined" multiline rows={5} />
-                    </Box>
-
-                    <Button variant="contained" size="large" fullWidth>
-                      Send Message
-                    </Button>
-                  </Box>
-                </Card>
+                
               </Grid>
             </Grid>
           </Container>

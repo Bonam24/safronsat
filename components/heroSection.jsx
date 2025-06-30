@@ -75,19 +75,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <Typography
-              variant="h1"
-              component="h1"
-              sx={{
-                fontSize: { xs: "2.5rem", md: "4rem" },
-                mb: 3,
-                fontWeight: "bold",
-                color: "#fff",
-                textShadow: "0 2px 10px rgba(0,0,0,0.8)",
-              }}
-            >
-              your gateway to space
-            </Typography>
+            
           </motion.div>
 
           <motion.div
