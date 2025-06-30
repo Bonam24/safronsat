@@ -302,7 +302,7 @@ export default function Home() {
     <Grid container spacing={8} sx={{ mb: 6 }}> {/* Increased spacing from 4 to 8 */}
       <Grid item xs={12} md={3}>
         <Typography variant="h6" component="div" sx={{ fontWeight: 700, mb: 3 }}>
-          SAFRONSAT
+          Novaspace
         </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
           Building the future of satellite technology for Africa and beyond.
