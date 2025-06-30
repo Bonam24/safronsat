@@ -73,19 +73,24 @@ export default function Navbar() {
         <Box sx={{ flexGrow: 1 }} />
         
         {/* About Button */}
-        <Link href="/about" passHref>
-          <Button
-            color="inherit"
-            sx={{
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-              fontSize: "0.875rem",
-              marginRight: 2,
-            }}
-          >
-            About
-          </Button>
-        </Link>
+        {/* Desktop Menu */}
+<Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 2 }}>
+  <Link href="/about" passHref>
+    <Button
+      color="inherit"
+      sx={{
+        textTransform: "uppercase",
+        letterSpacing: "0.1em",
+        fontSize: "0.875rem",
+      }}
+    >
+      About
+    </Button>
+  </Link>
+
+  
+</Box>
+
 
         {/* Desktop Menu */}
         <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 2 }}>

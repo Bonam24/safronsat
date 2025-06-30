@@ -24,6 +24,7 @@ import '@/styles/globals.css';
 import ServiceSection from "@/components/serviceSection";
 import HeroSection from "@/components/heroSection";
 import LocationMap from "@/components/map";
+import PartnersSection from "@/components/partners";
 
 // Create a custom theme with black and white colors
 const theme = createTheme({
@@ -146,7 +147,7 @@ export default function Home() {
                 </Typography>
                 <Typography variant="body1" sx={{ color: "text.secondary", mb: 4 }}>
                   Our satellites incorporate the latest advancements in miniaturization, power efficiency, and
-                  communication technologies. Designed specifically for Africa's unique challenges, our technology
+                  communication technologies. Designed specifically for continuous performance, our technology
                   delivers reliable performance in the most demanding conditions.
                 </Typography>
 
@@ -271,7 +272,7 @@ export default function Home() {
                     <Typography variant="overline" sx={{ color: "text.secondary", display: "block", mb: 0.5 }}>
                       Email
                     </Typography>
-                    <Typography variant="body1">tech@safronsat.com</Typography>
+                    <Typography variant="body1">engineering@novaspace.com</Typography>
                   </Box>
                 </Box>
               </Grid>
@@ -282,6 +283,7 @@ export default function Home() {
             </Grid>
           </Container>
         </Box>
+        <PartnersSection />
 
         {/* Footer */}
         <Box sx={{ borderTop: "1px solid rgba(255, 255, 255, 0.2)" }}>
@@ -292,7 +294,7 @@ export default function Home() {
                   NOVASPACE
                 </Typography>
                 <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                  Building the future of satellite technology for Africa and beyond.
+                  Building the future of satellite technology.
                 </Typography>
               </Grid>
 
@@ -320,7 +322,7 @@ export default function Home() {
                   Services
                 </Typography>
                 <List disablePadding>
-                  {["Safron-1", "Night-Lights", "Launch", "Connect & Monitor"].map(
+                  {["Manufacturing", "Launch"].map(
                     (item) => (
                       <ListItem key={item} disablePadding sx={{ pb: 1 }}>
                         <ListItemText
