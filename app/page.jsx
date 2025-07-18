@@ -286,28 +286,57 @@ export default function Home() {
         <PartnersSection />
 
         {/* Footer */}
-        <Box sx={{ borderTop: "1px solid rgba(255, 255, 255, 0.2)" }}>
+        <Box sx={{ 
+          borderTop: "1px solid rgba(255, 255, 255, 0.2)",
+          background: 'rgba(10, 10, 10, 0.7)',
+          backdropFilter: 'blur(4px)',
+        }}>
           <Container sx={{ py: 6 }}>
             <Grid container spacing={8} sx={{ mb: 6 }}>
               <Grid item xs={12} md={3}>
-                <Typography variant="h6" component="div" sx={{ fontWeight: 700, mb: 3 }}>
-                  NOVASPACE
+                <Typography
+                  variant="h6"
+                  component="div"
+                  sx={{
+                    fontWeight: 400,
+                    fontSize: "2rem",
+                    fontFamily: "'Urbanist', sans-serif",
+                    letterSpacing: "0em",
+                    textTransform: 'lowercase',
+                    mb: 3,
+                  }}
+                >
+                  novaspace
                 </Typography>
-                <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                  Building the future of satellite technology.
+                <Typography variant="body2" sx={{ color: "rgba(255, 255, 255, 0.7)", lineHeight: 1.7 }}>
+                  Building the future of satellite technology for Africa and beyond.
                 </Typography>
               </Grid>
 
               <Grid item xs={12} sm={4} md={2.5} sx={{ pl: 4 }}>
-                <Typography variant="overline" sx={{ display: "block", mb: 3 }}>
+                <Typography variant="overline" sx={{ 
+                  display: "block", 
+                  mb: 3, 
+                  color: "rgba(255, 255, 255, 0.7)",
+                  fontWeight: 600,
+                  letterSpacing: 1.5,
+                }}>
                   Company
                 </Typography>
                 <List disablePadding>
                   {["About Us", "Our Mission", "Leadership", "Careers", "News"].map((item) => (
-                    <ListItem key={item} disablePadding sx={{ pb: 1 }}>
+                    <ListItem key={item} disablePadding sx={{ pb: 1.5 }}>
                       <ListItemText
                         primary={
-                          <Link href="/about" style={{ color: "rgba(255, 255, 255, 0.7)", textDecoration: "none" }}>
+                          <Link href="/about" style={{ 
+                            color: "rgba(255, 255, 255, 0.7)", 
+                            textDecoration: "none",
+                            transition: 'all 0.3s ease',
+                            '&:hover': {
+                              color: '#ffffff',
+                              textDecoration: 'underline',
+                            }
+                          }}>
                             {item}
                           </Link>
                         }
@@ -318,36 +347,62 @@ export default function Home() {
               </Grid>
 
               <Grid item xs={12} sm={4} md={2.5} sx={{ pl: 4 }}>
-                <Typography variant="overline" sx={{ display: "block", mb: 3 }}>
+                <Typography variant="overline" sx={{ 
+                  display: "block", 
+                  mb: 3, 
+                  color: "rgba(255, 255, 255, 0.7)",
+                  fontWeight: 600,
+                  letterSpacing: 1.5,
+                }}>
                   Services
                 </Typography>
                 <List disablePadding>
-                  {["Manufacturing", "Launch"].map(
-                    (item) => (
-                      <ListItem key={item} disablePadding sx={{ pb: 1 }}>
-                        <ListItemText
-                          primary={
-                            <Link href="#" style={{ color: "rgba(255, 255, 255, 0.7)", textDecoration: "none" }}>
-                              {item}
-                            </Link>
-                          }
-                        />
-                      </ListItem>
-                    ),
-                  )}
+                  {["Manufacturing", "Launch"].map((item) => (
+                    <ListItem key={item} disablePadding sx={{ pb: 1.5 }}>
+                      <ListItemText
+                        primary={
+                          <Link href="#" style={{ 
+                            color: "rgba(255, 255, 255, 0.7)", 
+                            textDecoration: "none",
+                            transition: 'all 0.3s ease',
+                            '&:hover': {
+                              color: '#ffffff',
+                              textDecoration: 'underline',
+                            }
+                          }}>
+                            {item}
+                          </Link>
+                        }
+                      />
+                    </ListItem>
+                  ))}
                 </List>
               </Grid>
 
               <Grid item xs={12} sm={4} md={2.5} sx={{ pl: 4 }}>
-                <Typography variant="overline" sx={{ display: "block", mb: 3 }}>
+                <Typography variant="overline" sx={{ 
+                  display: "block", 
+                  mb: 3, 
+                  color: "rgba(255, 255, 255, 0.7)",
+                  fontWeight: 600,
+                  letterSpacing: 1.5,
+                }}>
                   Connect
                 </Typography>
                 <List disablePadding>
                   {["Contact Us", "Investor Relations", "Partnership Inquiries", "Media Kit"].map((item) => (
-                    <ListItem key={item} disablePadding sx={{ pb: 1 }}>
+                    <ListItem key={item} disablePadding sx={{ pb: 1.5 }}>
                       <ListItemText
                         primary={
-                          <Link href="#" style={{ color: "rgba(255, 255, 255, 0.7)", textDecoration: "none" }}>
+                          <Link href="#" style={{ 
+                            color: "rgba(255, 255, 255, 0.7)", 
+                            textDecoration: "none",
+                            transition: 'all 0.3s ease',
+                            '&:hover': {
+                              color: '#ffffff',
+                              textDecoration: 'underline',
+                            }
+                          }}>
                             {item}
                           </Link>
                         }
@@ -358,7 +413,12 @@ export default function Home() {
               </Grid>
             </Grid>
 
-            <Divider sx={{ mb: 3 }} />
+            <Divider sx={{ 
+              mb: 3, 
+              backgroundColor: 'rgba(255,255,255,0.1)',
+              height: '1px',
+              backgroundImage: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)'
+            }} />
 
             <Box
               sx={{
@@ -369,17 +429,41 @@ export default function Home() {
                 gap: { xs: 2, md: 0 },
               }}
             >
-              <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                © {new Date().getFullYear()} NOVASPACE. All rights reserved.
+              <Typography variant="body2" sx={{ color: "rgba(255, 255, 255, 0.7)" }}>
+                © {new Date().getFullYear()} Novaspace. All rights reserved.
               </Typography>
-              <Box sx={{ display: "flex", gap: 3 }}>
-                <Link href="#" style={{ color: "rgba(255, 255, 255, 0.7)", textDecoration: "none" }}>
+              <Box sx={{ display: "flex", gap: 3, flexWrap: 'wrap', justifyContent: 'center' }}>
+                <Link href="#" style={{ 
+                  color: "rgba(255, 255, 255, 0.7)", 
+                  textDecoration: "none",
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    color: '#ffffff',
+                    textDecoration: 'underline',
+                  }
+                }}>
                   Privacy Policy
                 </Link>
-                <Link href="#" style={{ color: "rgba(255, 255, 255, 0.7)", textDecoration: "none" }}>
+                <Link href="#" style={{ 
+                  color: "rgba(255, 255, 255, 0.7)", 
+                  textDecoration: "none",
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    color: '#ffffff',
+                    textDecoration: 'underline',
+                  }
+                }}>
                   Terms of Service
                 </Link>
-                <Link href="#" style={{ color: "rgba(255, 255, 255, 0.7)", textDecoration: "none" }}>
+                <Link href="#" style={{ 
+                  color: "rgba(255, 255, 255, 0.7)", 
+                  textDecoration: "none",
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    color: '#ffffff',
+                    textDecoration: 'underline',
+                  }
+                }}>
                   Cookie Policy
                 </Link>
               </Box>

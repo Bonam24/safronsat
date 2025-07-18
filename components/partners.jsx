@@ -5,7 +5,6 @@ import { styled, keyframes } from '@mui/system';
 
 const partners = [
   { name: ' Rocket labs', logo: '/rocketlab.png' },
-  { name: 'Launch Vehicle', logo: '/launchvehicle.webp' },
   { name: 'KSA - National Regulator', logo: '/Kenya-Space-Agency.webp' },
   { name: 'Elodin - Systems development Board ', logo: '/elodin.png' },
   { name: 'iqps - technical support & development', logo: '/iqps.png' },

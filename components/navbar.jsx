@@ -60,39 +60,37 @@ export default function Navbar() {
             variant="h6"
             component="div"
             sx={{
-              fontWeight: 700, // Changed from 400 to 700 for bolder text
-              fontSize: "1.5rem",
-              letterSpacing: "0.1em",
-              textTransform: 'uppercase'
+              fontWeight: 400,
+              fontSize: "2rem",
+              fontFamily: "'Urbanist', sans-serif",
+              letterSpacing: "0em",
+              textTransform: 'lowercase',
             }}
           >
-            NOVASPACE
+            novaspace
           </Typography>
         </Link>
 
         <Box sx={{ flexGrow: 1 }} />
-        
-        {/* About Button */}
-        {/* Desktop Menu */}
-<Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 2 }}>
-  <Link href="/about" passHref>
-    <Button
-      color="inherit"
-      sx={{
-        textTransform: "uppercase",
-        letterSpacing: "0.1em",
-        fontSize: "0.875rem",
-      }}
-    >
-      About
-    </Button>
-  </Link>
 
-  
-</Box>
+        {/* Desktop About Button */}
+        <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 2 }}>
+          <Link href="/about" passHref>
+            <Button
+              color="inherit"
+              sx={{
+                textTransform: "uppercase",
+                letterSpacing: "0.1em",
+                fontSize: "0.875rem",
+                fontFamily: "'Urbanist', sans-serif",
+              }}
+            >
+              About
+            </Button>
+          </Link>
+        </Box>
 
-
-        {/* Desktop Menu */}
+        {/* Desktop Investor Relations Menu */}
         <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center", gap: 2 }}>
           <Button
             color="inherit"
@@ -102,6 +100,7 @@ export default function Navbar() {
               textTransform: "uppercase",
               letterSpacing: "0.1em",
               fontSize: "0.875rem",
+              fontFamily: "'Urbanist', sans-serif",
             }}
           >
             Investor Relations
@@ -153,8 +152,17 @@ export default function Navbar() {
           }}
         >
           <Box sx={{ mb: 4 }}>
-            <Typography variant="h6" component="div" sx={{ fontWeight: 700 }}>
-              NOVASPACE
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{
+                fontWeight: 400,
+                fontSize: "2rem",
+                fontFamily: "'Urbanist', sans-serif",
+                textTransform: "lowercase",
+              }}
+            >
+              novaspace
             </Typography>
           </Box>
 
@@ -167,6 +175,7 @@ export default function Navbar() {
                     textTransform: "uppercase",
                     letterSpacing: "0.1em",
                     fontSize: "0.875rem",
+                    fontFamily: "'Urbanist', sans-serif",
                   },
                 }}
               />
@@ -197,6 +206,7 @@ export default function Navbar() {
                       textTransform: "uppercase",
                       letterSpacing: "0.1em",
                       fontSize: "0.875rem",
+                      fontFamily: "'Urbanist', sans-serif",
                     },
                   }}
                 />
